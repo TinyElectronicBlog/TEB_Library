@@ -43,7 +43,7 @@ class TEB_Strings {
           \param [in] to1  Final delimiter of the string in which to look for.
           \param [in] str2 Initial delimiter of the string to search for.
           \param [in] to2  Final delimiter of the string to search for.
-          \return A pointer to the str2-to2 string within the char array str1-to1 or -1 if not found.
+          \return A pointer to the str2-to2 string within the char array str1-to1 or 0 if not found.
     */
     static const char* indexOf (const char* str1, const char* to1, const char* str2, const char* to2);
 
@@ -52,7 +52,7 @@ class TEB_Strings {
           \param [in] str1 Initial delimiter of the string in which to look for.
           \param [in] to1  Final delimiter of the string in which to look for.
           \param [in] str2 Initial delimiter of the string to search for.
-          \return A pointer to the str2 string within the char array str1-to1 or -1 if not found.
+          \return A pointer to the str2 string within the char array str1-to1 or 0 if not found.
     */
     static const char* indexOf (const char* str1, const char* to1, const char* str2);
 
@@ -60,7 +60,7 @@ class TEB_Strings {
           \brief Looks for the str2 string (must ends with \0) in the char array str1 (must ends with \0) from left to right. Returns a pointer to str2 string within str1 or -1 if not found.
           \param [in] str1 Initial delimiter of the string in which to look for.
           \param [in] str2 Initial delimiter of the string to search for.
-          \return A pointer to the str2 string within the char array str1 or -1 if not found.
+          \return A pointer to the str2 string within the char array str1 or 0 if not found.
     */
     static const char* indexOf (const char* str1, const char* str2);
 
@@ -70,7 +70,7 @@ class TEB_Strings {
           \param [in] to1  Final delimiter of the string in which to look for.
           \param [in] str2 Initial delimiter of the string to search for.
           \param [in] to2  Final delimiter of the string to search for.
-          \return A pointer to the str2-to2 string within the char array str1-to1 or -1 if not found.
+          \return A pointer to the str2-to2 string within the char array str1-to1 or 0 if not found.
     */
     static const char* lastIndexOf (const char* str1, const char* to1, const char* str2, const char* to2);
 
@@ -79,7 +79,7 @@ class TEB_Strings {
         \param [in] str1 Initial delimiter of the string in which to look for.
         \param [in] to1  Final delimiter of the string in which to look for.
         \param [in] str2 Initial delimiter of the string to search for.
-        \return A pointer to the str2 string within the char array str1-to1 or -1 if not found.
+        \return A pointer to the str2 string within the char array str1-to1 or 0 if not found.
     */
     static const char* lastIndexOf (const char* str1, const char* to1, const char* str2);
 
@@ -87,7 +87,7 @@ class TEB_Strings {
           \brief Like the index_of method but the search is done from right to left.
           \param [in] str1 Initial delimiter of the string in which to look for.
           \param [in] str2 Initial delimiter of the string to search for.
-          \return A pointer to the str2 string within the char array str1 or -1 if not found.
+          \return A pointer to the str2 string within the char array str1 or 0 if not found.
     */
     static const char* lastIndexOf (const char* str1, const char* str2);
 
