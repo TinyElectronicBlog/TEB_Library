@@ -188,10 +188,9 @@ class TEB_OAuth2
     static int8_t deleteRefreshTokenEEPROM ();
 
 #ifdef TEB_DB_DEBUG
-  private:
-    static void s3PrintText (const char* t);
-
   public:
+    static void s3PrintText (const char* t);
+      
     static void test (const char* ssid, const char* password, uint32_t timeOut);
 #endif
 
