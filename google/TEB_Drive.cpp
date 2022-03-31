@@ -177,6 +177,7 @@ const char* TEB_Drive::generate_http_request_text (uint8_t type) {
     case 5:
       TEB_OAuth2::splittable_buffer->addDXreverse_P(str13);
       TEB_OAuth2::splittable_buffer->addDXreverse("&alt", 4);
+      break;
     case 7:
       TEB_OAuth2::splittable_buffer->addDXreverse(temp_p3, strlen(temp_p3));
       TEB_OAuth2::splittable_buffer->addDXreverse("=", 1);
