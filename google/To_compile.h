@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2021 TinyElectronicBlog
+  Copyright (c) 2022 TinyElectronicBlog
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -27,5 +27,6 @@
 
 #include "TEB_OAuth2.cpp"
 #include "TEB_Drive.cpp"
+#include "TEB_Drive_Remote_Control_Interface.cpp"
 
 #endif
