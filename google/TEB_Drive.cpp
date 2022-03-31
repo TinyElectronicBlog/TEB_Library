@@ -617,7 +617,7 @@ void TEB_Drive::test (const char* ssid, const char* password, uint32_t timeOut) 
     }
   }
   TEB_DevelopmentBoard::TEB_Debug::print(F("\nExecute OAuth2 authentication.\n"));
-  if (TEB_OAuth2::login("https://www.googleapis.com/auth/drive.file", accessTokenBuffer, false, TEB_OAuth2::s3PrintText) != 1 ) {
+  if (TEB_OAuth2::login("https://www.googleapis.com/auth/drive.file", accessTokenBuffer, true, TEB_OAuth2::s3PrintText) != 1 ) {
     TEB_DevelopmentBoard::TEB_Debug::print(F("\nLogin failed. End of the test.\n"));
     return;
   }
