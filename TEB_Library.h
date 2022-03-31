@@ -70,8 +70,8 @@
 
 
 //TEB_Drive_Remote_Control_Interface CLASS VALUES
-//Name of the Google Drive folder containing the workspace folders of the Remote Control Android application
-#define TEB_Drive_Remote_Control_Interface_TINY_ELECTRONIC_BLOG_FOLDER_NAME "Tiny Electronic Blog folder"
+//Name in URL encoding of the Google Drive folder containing the workspace folders of the Remote Control Android application
+#define TEB_Drive_Remote_Control_Interface_TINY_ELECTRONIC_BLOG_FOLDER_NAME "Tiny%20Electronic%20Blog%20folder"
 
 
 
