@@ -99,6 +99,7 @@ class TEB_Library {
 
     static TEB_DevelopmentBoard db;
     static TEB_Drive gdrive;
+    static TEB_Drive_Remote_Control_Interface rcinterface;
     static TEB_Numbers numbers;
     static TEB_OAuth2 oauth2;
     static TEB_Strings strings;
@@ -113,6 +114,7 @@ class TEB_Library {
       TEB_Splittable_Array::test();
       TEB_OAuth2::test(ssid, password, timeOut);
       TEB_Drive::test(ssid, password, timeOut);
+      TEB_Drive_Remote_Control_Interface::test(ssid, password, timeOut);
       TEB_DevelopmentBoard::test(ssid, password, timeOut);
     }
 #endif
