@@ -135,7 +135,7 @@ class TEB_Drive
        \param [in] q A query for filtering the results.
        \param [in] orderBy A list of sort keys.
        \param [in] fields The paths of the fields you want included in the response.
-       \param [in] pageSize The maximum number of files to return per page.
+       \param [in] pageSize The maximum number of files to return per page. Enter 0 to set the default value.
        \param [in] pageToken The token for continuing a previous request.
        \param [in] responseBuffer Buffer in which the body of the http response is saved. It cannot be NULL.
        \return 1 on success, otherwise a negative value.
