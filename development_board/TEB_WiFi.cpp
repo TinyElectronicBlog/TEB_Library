@@ -77,7 +77,7 @@ int8_t TEB_DevelopmentBoard::TEB_WiFi::check () {
   }
   else {
 #ifdef TEB_DB_DEBUG
-    TEB_DevelopmentBoard::TEB_Debug::print(F("\The device is not connected to the Internet.\n"));
+    TEB_DevelopmentBoard::TEB_Debug::print(F("\nThe device is not connected to the Internet.\n"));
 #endif
     return -1;
   }
