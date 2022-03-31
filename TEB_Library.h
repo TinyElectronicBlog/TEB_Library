@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2021 TinyElectronicBlog
+  Copyright (c) 2022 TinyElectronicBlog
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -66,6 +66,12 @@
 #define TEB_OAUTH2_SPLITTABLE_BUFFER_SIZE_FOR_GET_FILE_CONTENT 10000
 #define TEB_OAUTH2_SPLITTABLE_BUFFER_SIZE_FOR_DELETE_FILE 2500
 #define TEB_OAUTH2_SPLITTABLE_BUFFER_SIZE_FOR_EXPORT_GOOGLE_DOC_CONTENT 10000
+
+
+
+//TEB_Drive_Remote_Control_Interface CLASS VALUES
+//Name of the Google Drive folder containing the workspace folders of the Remote Control Android application
+#define TEB_Drive_Remote_Control_Interface_TINY_ELECTRONIC_BLOG_FOLDER_NAME "Tiny Electronic Blog folder"
 
 
 
