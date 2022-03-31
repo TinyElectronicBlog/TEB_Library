@@ -148,7 +148,7 @@ const char* TEB_Drive::generate_http_request_text (uint8_t type) {
         TEB_OAuth2::splittable_buffer->addDXreverse(temp_p2, strlen(temp_p2));
         TEB_OAuth2::splittable_buffer->addDXreverse_P(str7);
       }
-      if (temp_i1 != NULL) {
+      if (temp_i1 != 0) {
         TEB_Strings::intChar(temp_i1, (char*)TEB_OAuth2::splittable_buffer->SX());
         TEB_OAuth2::splittable_buffer->addDXreverse((const char*)TEB_OAuth2::splittable_buffer->SX(), strlen((const char*)TEB_OAuth2::splittable_buffer->SX()));
         TEB_OAuth2::splittable_buffer->addDXreverse_P(str6);
