@@ -32,7 +32,7 @@
 
 /**
     \class TEB_Drive
-    \brief This class has methods for basic file management on Google Drive. For more information see https://developers.google.com/drive/api/v3/reference. This class requires an access token which can be obtained with TEB_OAuth2 class. Attention, some input parameters of the functions must be provided URL encoded.
+    \brief This class has methods for basic file management on Google Drive. For more information see https://developers.google.com/drive/api/v3/reference. This class requires an access token which can be obtained with TEB_OAuth2 class. Attention, some input parameters of the functions must be provided URL encoded; to know which ones precisely (the information in this file may be inaccurate), you can help yourself with the "Try this method" function present in the online Google documentation of a method (e.g. https://developers.google.com/drive/api/v3/reference/about/get).
 */
 class TEB_Drive
 {
