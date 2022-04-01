@@ -161,18 +161,18 @@ class TEB_Strings {
 
     /**
           \brief Copies source (included) - to (excluded) in destination. destination ends with \0 and a pointer to the latter \0 is returned. If the following characters are present in source:\n ':'	'/'	'?'	'#'	'['	']'	'@'	'!'	'$'	'&'	"'"	'('	')'	'*'	'+'	','	';'	'='	'%'	' '\n are replaced with the following relative values:\n %3A	%2F	%3F	%23	%5B	%5D	%40	%21	%24	%26	%27	%28	%29	%2A	%2B	%2C	%3B	%3D	%25	%20.
-        \param [in] destination Buffer where to copy source.
+          \param [in] destination Buffer where to copy source.
           \param [in] source      Initial delimiter of the string to be copied.
           \param [in] to          Final delimiter of the string to be copied.
-          \return The converted string.
+          \return Pointer to \0 of destination.
     */
     static char* percentEncoding (char* destination, const char* source, const char* to);
 
     /**
           \brief Copies source (must end with \0) in destination. destination ends with \0 and a pointer to the latter \0 is returned. If the following characters are present in source:\n ':'	'/'	'?'	'#'	'['	']'	'@'	'!'	'$'	'&'	"'"	'('	')'	'*'	'+'	','	';'	'='	'%'	' '\n are replaced with the following relative values:\n %3A	%2F	%3F	%23	%5B	%5D	%40	%21	%24	%26	%27	%28	%29	%2A	%2B	%2C	%3B	%3D	%25	%20.
-        \param [in] destination Buffer where to copy source.
+          \param [in] destination Buffer where to copy source.
           \param [in] source    String to copy that must end with \0.
-          \return The converted string.
+          \return Pointer to \0 of destination.
     */static char* percentEncoding (char* destination, const char* source);
 
 #ifdef TEB_DB_DEBUG
