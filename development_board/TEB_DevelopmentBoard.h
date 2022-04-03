@@ -81,7 +81,13 @@ class TEB_DevelopmentBoard  {
            \param [in] number The number to be printed.
         */
         static void print (uint32_t number);
-
+      
+        /**
+           \brief In TEB_DB_DEBUG 1 or 0 mode prints information to the debug monitor.
+           \param [in] number The number to be printed.
+        */
+        static void print (float number);
+      
         /**
            \brief In TEB_DB_DEBUG 1 or 0 mode prints information to the debug monitor.
            \param [in] text The text to be printed.
