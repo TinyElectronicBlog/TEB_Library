@@ -117,6 +117,13 @@ void TEB_DevelopmentBoard::TEB_Debug::print (int32_t number) {
 #endif
 }
 
+void TEB_DevelopmentBoard::TEB_Debug::print (float number) {
+#if TEB_DB_DEBUG == 1 || TEB_DB_DEBUG == 0
+  TEB_DevelopmentBoard_TEB_Debug_debug_initialize();
+  Serial.print(number);
+#endif
+}
+
 void TEB_DevelopmentBoard::TEB_Debug::print (const char* text) {
 #if TEB_DB_DEBUG == 1 || TEB_DB_DEBUG == 0
   if (text == NULL) fatalError(128, TEB_DevelopmentBoard_TEB_Debug_debug1);
