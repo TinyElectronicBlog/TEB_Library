@@ -333,6 +333,7 @@ void TEB_DevelopmentBoard::TEB_HTTP::stop () {
 
 #ifdef TEB_DB_DEBUG
 void TEB_DevelopmentBoard::TEB_HTTP::test (const char* ssid, const char* password, uint32_t timeOut) {
+  char* responseBuffer = (char*)malloc(3500);
   TEB_DevelopmentBoard::TEB_Debug tebdb = TEB_DevelopmentBoard::TEB_Debug(F("TEB_DevelopmentBoard::TEB_HTTP::test (const char* ssid, const char* password, uint32_t timeOut)"));
   TEB_DevelopmentBoard::TEB_Debug::print(TEB_Library_global_string_for_debugging1);
   TEB_DevelopmentBoard::TEB_Debug::print(F("TEB_DevelopmentBoard::TEB_HTTP"));
@@ -352,7 +353,6 @@ void TEB_DevelopmentBoard::TEB_HTTP::test (const char* ssid, const char* passwor
   httpRequest.connectionTimeout = 15000;
   httpRequest.responseDelay = 15000;
   TEB_DevelopmentBoard::TEB_HTTP::response httpResponse;
-  char responseBuffer[3500];
   if (sendRequest(httpRequest, httpResponse, responseBuffer, 3500) != 1) {
     TEB_DevelopmentBoard::TEB_Debug::print(F("\nProblems with sendRequest. End of the test.\n"));
     return;
@@ -386,5 +386,6 @@ void TEB_DevelopmentBoard::TEB_HTTP::test (const char* ssid, const char* passwor
   TEB_DevelopmentBoard::TEB_Debug::print(F("\n"));
   stop();
   TEB_DevelopmentBoard::TEB_Debug::print(TEB_Library_global_string_for_debugging3);
+  free(responseBuffer);
 }
 #endif
