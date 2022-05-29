@@ -8,7 +8,7 @@ and more. It not support all features of a development board; for example, there
 
 Not all functions include error checking and not all types of bugs are handled; the instructions and methods for managing errors are present only when debugging is active, in order to lighten the source code when debugging is disabled.
 
-Almost all classes that depend on libraries specific to a particular development board are contained in the development_board folder, making it easier to support a new board.
+Almost all external dependencies are contained in the file "TEB_External_dependencies.h", making it easier to support a new board.
 
 The library was not written aiming at maximum efficiency but to try to offer a good compromise between stability, efficiency and ease of editing, in order to simplify any future code changes.
 
