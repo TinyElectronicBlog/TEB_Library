@@ -28,7 +28,7 @@
 
 
 //SELECT DEBUG MODE
-#define TEB_DB_DEBUG 0 //If uncommented, error handling functions are activated and various useful bug fix information is printed on the debug monitor. TEB_DB_DEBUG can be set to 0, 1 or 2; refer to the documentation of TEB_DevelopmentBoard::TEB_Debug to know what is enabled based on the value of TEB_DB_DEBUG.
+#define TEB_DB_DEBUG 1 //If uncommented, error handling functions are activated and various useful bug fix information is printed on the debug monitor. TEB_DB_DEBUG can be set to 0, 1 or 2; refer to the documentation of TEB_DevelopmentBoard::TEB_Debug to know what is enabled based on the value of TEB_DB_DEBUG.
 #define TEB_DB_BAUD_RATE 115200
 
 
