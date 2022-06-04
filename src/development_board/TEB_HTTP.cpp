@@ -114,7 +114,13 @@ int8_t TEB_HTTP::sendRequest (request& httpRequest, response& httpResponse, char
   TEB_HTTP_client.print(httpRequest.requestText);
   httpResponse.header = responseBuffer;
   responseBuffer = (*responseReceptionAlgorithm)(&TEB_HTTP_client, httpResponse.header, responseBufferSize, httpRequest.responseDelay);
+#ifndef TEB_DB_DEBUG
   httpResponse.payload = (char*)TEB_Strings::indexOf(httpResponse.header, responseBuffer, "\r\n\r\n");
+#endif
+#ifdef TEB_DB_DEBUG
+	if (httpResponse.header == responseBuffer) httpResponse.payload = 0; 
+	else httpResponse.payload = (char*)TEB_Strings::indexOf(httpResponse.header, responseBuffer, "\r\n\r\n");
+#endif
   size_t i3;
   if (httpResponse.payload == 0) {
     httpResponse.headerLength = responseBuffer - httpResponse.header;
