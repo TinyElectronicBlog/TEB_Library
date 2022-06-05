@@ -274,11 +274,11 @@ int8_t TEB_Drive::execute_http_request (uint8_t type, char* buffer1) {
       if (r == 1) {
         if (http_response_property.status_code == 200) {
 #ifndef TEB_DB_DEBUG
-	      TEB_Strings::append(buffer1, http_response_property.property, http_response_property.property + http_response_property.property_length);
+          TEB_Strings::append(buffer1, http_response_property.property, http_response_property.property + http_response_property.property_length);
 #endif
 #ifndef TEB_DB_DEBUG
-	      if (http_response_property.property_length == 0) *buffer1 = '\0';
-		  else TEB_Strings::append(buffer1, http_response_property.property, http_response_property.property + http_response_property.property_length);
+          if (http_response_property.property_length == 0) *buffer1 = '\0';
+          else TEB_Strings::append(buffer1, http_response_property.property, http_response_property.property + http_response_property.property_length);
 #endif
           r = 1;
         }
@@ -296,13 +296,13 @@ int8_t TEB_Drive::execute_http_request (uint8_t type, char* buffer1) {
           if (http_response_property.status_code == 200) {
             if (type == 5) {
 #ifndef TEB_DB_DEBUG
-			  TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength);
+              TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength);
 #endif
 #ifndef TEB_DB_DEBUG
 	      if (http_response.payloadLength == 0) *buffer1 = '\0';
-		  else TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength);
+              else TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength);
 #endif
-			}
+            }
             else if (type == 7 || type == 2) {
               while (*http_response.payload != '\n') {
                 http_response.payload++;
@@ -312,11 +312,11 @@ int8_t TEB_Drive::execute_http_request (uint8_t type, char* buffer1) {
               http_response.payloadLength--;
               if (type == 2) http_response.payloadLength--;
 #ifndef TEB_DB_DEBUG
-			  TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength - 7);
+              TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength - 7);
 #endif
 #ifndef TEB_DB_DEBUG
 	      if (http_response.payloadLength - 7 == 0) *buffer1 = '\0';
-		  else TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength - 7);
+              else TEB_Strings::append(buffer1, http_response.payload, http_response.payload + http_response.payloadLength - 7);
 #endif
             }
             r = 1;
