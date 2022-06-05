@@ -502,6 +502,9 @@ int8_t TEB_Drive::createMetadataOnlyFile (const char* name, const char* parents,
   if (responseBuffer == NULL) {
     TEB_Debug::fatalError(158,  F("responseBuffer cannot be NULL."));
   }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(276,  F("Set the accessToken before using this function."));
+  }
 #endif
   temp_i2 = 1;
   temp_p3 = name;
@@ -515,6 +518,9 @@ int8_t TEB_Drive::searchFile (const char* q, const char* orderBy, const char* fi
   TEB_Debug tebdb = TEB_Debug(F("TEB_Drive::searchFile (const char* q, const char* orderBy, const char* fields, uint16_t pageSize, const char* pageToken, char* responseBuffer)"));
   if (responseBuffer == NULL) {
     TEB_Debug::fatalError(159,  F("responseBuffer cannot be NULL."));
+  }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(279,  F("Set the accessToken before using this function."));
   }
 #endif
   temp_i1 = pageSize;
@@ -531,6 +537,9 @@ int8_t TEB_Drive::updateFileMetadata (const char* fileID, const char* fileName, 
   TEB_Debug tebdb = TEB_Debug(F("TEB_Drive::updateFileMetadata (const char* fileID, const char* fileName, const char* addParents, const char* removeParents)"));
   if (fileID == NULL) {
     TEB_Debug::fatalError(160,  F("fileID cannot be NULL."));
+  }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(277,  F("Set the accessToken before using this function."));
   }
 #endif
   temp_i2 = 3;
@@ -553,6 +562,9 @@ int8_t TEB_Drive::updateFileContent (const char* fileID, const char* fileContent
   if (mimeType == NULL) {
     TEB_Debug::fatalError(164,  F("mimeType cannot be NULL."));
   }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(278,  F("Set the accessToken before using this function."));
+  }
 #endif
   temp_i2 = 4;
   temp_p2 = fileContent;
@@ -570,6 +582,9 @@ int8_t TEB_Drive::getFileContent (const char* fileID, char* responseBuffer) {
   if (responseBuffer == NULL) {
     TEB_Debug::fatalError(166,  F("responseBuffer cannot be NULL."));
   }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(280,  F("Set the accessToken before using this function."));
+  }
 #endif
   temp_i2 = 5;
   temp_p4 = fileID;
@@ -581,6 +596,9 @@ int8_t TEB_Drive::deleteFile (const char* fileID) {
   TEB_Debug tebdb = TEB_Debug(F("TEB_Drive::deleteFile (const char* fileID)"));
   if (fileID == NULL) {
     TEB_Debug::fatalError(167,  F("fileID cannot be NULL."));
+  }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(281,  F("Set the accessToken before using this function."));
   }
 #endif
   temp_i2 = 6;
@@ -599,6 +617,9 @@ int8_t TEB_Drive::exportGoogleDocContent (const char* fileID, char* mimeType, ch
   }
   if (responseBuffer == NULL) {
     TEB_Debug::fatalError(170,  F("responseBuffer cannot be NULL."));
+  }
+  if (temp_p5 == NULL) {
+    TEB_Debug::fatalError(282,  F("Set the accessToken before using this function."));
   }
 #endif
   temp_i2 = 7;
