@@ -29,6 +29,7 @@
 
 #include <Arduino.h>
 #include "../development_board/TEB_Debug.h"
+#include "../development_board/TEB_HTTP.h"
 #include "../arrays/TEB_Splittable_Array.h"
 #include "../strings_and_numbers/TEB_Numbers.h"
 #include "../strings_and_numbers/TEB_Strings.h"
