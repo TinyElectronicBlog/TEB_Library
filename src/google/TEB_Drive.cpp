@@ -38,28 +38,28 @@ const char* TEB_Drive::temp_p3 = NULL;
 const char* TEB_Drive::temp_p4 = NULL;
 const char* TEB_Drive::temp_p5 = NULL;
 
-const char TEB_Drive::str1[] = "https://www.googleapis.com";
-const char TEB_Drive::str2[] = "drive/v3/files";
-const char TEB_Drive::str3[] = "?key=";
-const char TEB_Drive::str4[] = " HTTP/1.1\r\nAuthorization:Bearer ";
-const char TEB_Drive::str5[] = "&orderBy=";
-const char TEB_Drive::str6[] = "&pageSize=";
-const char TEB_Drive::str7[] = "&pageToken=";
-const char TEB_Drive::str8[] = "&q=";
-const char TEB_Drive::str9[] = "&fields=";
-const char TEB_Drive::str10[] = "Parents=";
-const char TEB_Drive::str11[] = "&remove";
-const char TEB_Drive::str12[] = "&uploadType";
-const char TEB_Drive::str13[] = "=media";
-const char TEB_Drive::str14[] = "\r\nAccept:";
-const char TEB_Drive::str15[] = "Content-Type:";
-const char TEB_Drive::str16[] = "Length:";
-const char TEB_Drive::str17[] = "\"name\":\"";
-const char TEB_Drive::str18[] = "\"parents\":[\"";
-const char TEB_Drive::str19[] = "mimeType\":\"";
-const char TEB_Drive::str20[] = "application/json";
+const char TEB_Drive::str1[] PROGMEM = "https://www.googleapis.com";
+const char TEB_Drive::str2[] PROGMEM = "drive/v3/files";
+const char TEB_Drive::str3[] PROGMEM = "?key=";
+const char TEB_Drive::str4[] PROGMEM = " HTTP/1.1\r\nAuthorization:Bearer ";
+const char TEB_Drive::str5[] PROGMEM = "&orderBy=";
+const char TEB_Drive::str6[] PROGMEM = "&pageSize=";
+const char TEB_Drive::str7[] PROGMEM = "&pageToken=";
+const char TEB_Drive::str8[] PROGMEM = "&q=";
+const char TEB_Drive::str9[] PROGMEM = "&fields=";
+const char TEB_Drive::str10[] PROGMEM = "Parents=";
+const char TEB_Drive::str11[] PROGMEM = "&remove";
+const char TEB_Drive::str12[] PROGMEM = "&uploadType";
+const char TEB_Drive::str13[] PROGMEM = "=media";
+const char TEB_Drive::str14[] PROGMEM = "\r\nAccept:";
+const char TEB_Drive::str15[] PROGMEM = "Content-Type:";
+const char TEB_Drive::str16[] PROGMEM = "Length:";
+const char TEB_Drive::str17[] PROGMEM = "\"name\":\"";
+const char TEB_Drive::str18[] PROGMEM = "\"parents\":[\"";
+const char TEB_Drive::str19[] PROGMEM = "mimeType\":\"";
+const char TEB_Drive::str20[] PROGMEM = "application/json";
 #ifdef TEB_DB_DEBUG
-const char TEB_Drive::debug1[] = "TEB_Drive::execute_http_request returned -";
+const char TEB_Drive::debug1[] PROGMEM = "TEB_Drive::execute_http_request returned -";
 #endif
 
 /*
