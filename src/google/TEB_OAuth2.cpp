@@ -25,6 +25,7 @@
 */
 
 #include "../TEB_External_dependencies.h"
+#include "../development_board/TEB_EEPROM.h"
 #include "TEB_OAuth2.h"
 
 const char TEB_OAuth2::oauth2_api_key[] PROGMEM = TEB_OAuth2_API_KEY;
