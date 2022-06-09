@@ -483,7 +483,7 @@ int8_t device::getCommand () {
 }
 
 int8_t device::getCustomCommand () {
-  char commandNameBuffer[20], b[151], b2[151];
+  char commandNameBuffer[60], b[151], b2[151];
   teb.strings.percentEncoding(b, DEVICE_ID);
   char* p;
   switch (teb.rcinterface.getCustomCommand(DEVICE_ID, workspaceFolderID, commandNameBuffer)) {
