@@ -38,7 +38,7 @@
     */
 	
 	/**
-	    pointer: pointer to the memory location of the associated array;
+	   pointer: pointer to the memory location of the associated array;
 	   sizeof_one_element: size of an array element (e.g. sizeof(int) for an array of int);
 	   length: number of array elements;
 	   allocation_mode: 1 if a new dynamically allocated array is associated, 2 one already instantiated, another value if nothing is associated.
@@ -69,7 +69,7 @@ TEB_small_int TEB_String_equals2 (const TEB_char* str1,
 
 /**
           \brief Compare two strings.
-           \param [in] str1 Initial delimiter of the first string (inclusive).
+          \param [in] str1 Initial delimiter of the first string (inclusive).
           \param [in] to1 Final delimiter of the first string (excluded).
           \param [in] str2 Must end with \0.
           \return 1 if str1 and str2 are equal (the \0 is neglected), 0 otherwise.
@@ -164,7 +164,7 @@ TEB_char* TEB_String_append2 (TEB_char* destination, const TEB_char* source);
        \param [in] last_element_of_the_destination_buffer The last element of the buffer where to copy source.
        \param [in] source      Initial delimiter of the string to be copied (inclusive).
        \param [in] to          Final delimiter of the string to be copied (excluded).
-	   \param [in] ends_with_null_character          1 to end the copied string with \0, otherwise 0.	   
+       \param [in] ends_with_null_character          1 to end the copied string with \0, otherwise 0.	   
        \return The initial element of source copied into the buffer.
        \details The buffer must be large enough to contain source.
     */
@@ -177,7 +177,7 @@ TEB_char* TEB_String_append_end (TEB_char* last_element_of_the_destination_buffe
        \brief Like TEB_String_append, however source is saved at the end of the buffer.
        \param [in] last_element_of_the_destination_buffer The last element of the buffer where to copy source.
        \param [in] source      String to copy. Must end with \0.
-	   \param [in] ends_with_null_character          1 to end the copied string with \0, otherwise 0.	   
+       \param [in] ends_with_null_character          1 to end the copied string with \0, otherwise 0.	   
        \return The initial element of source copied into the buffer.
        \details The buffer must be large enough to contain source.
     */
