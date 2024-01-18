@@ -34,10 +34,10 @@
 
 /**
        \brief Retrieve the workspace folder ID.
-	   \param [in] access_token An access token.
+       \param [in] access_token An access token.
        \param [in] workspace_folder_name The workspace folder name. Must be URL encoded.
        \param [in] workspace_folder_id_buffer The buffer in which to save the ID.
-       	\param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
 		\return 0 on success, 1 if the Tiny Electronic Blog folder does not exist, 2 if the workspace folder does not exist, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_get_workspace_folder_id (const TEB_char* access_token,
@@ -47,8 +47,8 @@ TEB_small_int TEB_RemoteControlInterface_get_workspace_folder_id (const TEB_char
 
 /**
        \brief Generates a new device file in the workspace folder and returns its ID.
-         \param [in] access_token An access token.
-		\param [in] device_id The device ID.
+       \param [in] access_token An access token.
+       \param [in] device_id The device ID.
        \param [in] workspace_folder_id The workspace folder ID.
        \param [in] device_file_id_buffer The buffer in which to save the ID, even if 1 or -2 is returned.
        \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_CREATE_METADATA_ONLY_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
@@ -77,24 +77,24 @@ TEB_small_int TEB_RemoteControlInterface_get_device_file_id (const TEB_char* acc
 
 /**
        \brief Retrieves the text of the device file present in the workspace folder.
-      \param [in] access_token An access token.
-        \param [in] device_file_id The device file ID.
+       \param [in] access_token An access token.
+       \param [in] device_file_id The device file ID.
        \param [in] text_buffer The buffer in which to save the text.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_GET_FILE_CONTENT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 1 on success, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_GET_FILE_CONTENT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 1 on success, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_get_device_file_text (const TEB_char* access_token,
                                                               const TEB_char* device_file_id,
                                                               TEB_char* text_buffer,
                                                               TEB_char* function_buffer);
 
-/**
+    /**
        \brief Updates the text of the device file present in the workspace folder.
        \param [in] access_token An access token.
        \param [in] device_file_id The device file ID.
        \param [in] text The new text.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_UPDATE_FILE_CONTENT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 1 on success, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_UPDATE_FILE_CONTENT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 1 on success, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_update_device_file_text (const TEB_char* access_token,
                                                                  const TEB_char* device_file_id,
@@ -105,8 +105,8 @@ TEB_small_int TEB_RemoteControlInterface_update_device_file_text (const TEB_char
        \brief Deletes the device file present in the workspace folder.
        \param [in] access_token An access token.
        \param [in] device_file_id The device file ID.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_DELETE_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 1 on success, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_DELETE_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 1 on success, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_delete_device_file (const TEB_char* access_token,
                                                             const TEB_char* device_file_id,
@@ -117,8 +117,8 @@ TEB_small_int TEB_RemoteControlInterface_delete_device_file (const TEB_char* acc
        \param [in] access_token An access token.
        \param [in] device_id The device ID. Must be URL encoded.
        \param [in] workspace_folder_id The workspace folder ID.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 0 if there is at least one ACK, 1 if there are none, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 0 if there is at least one ACK, 1 if there are none, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_is_there_ack (const TEB_char* access_token,
                                                       const TEB_char* device_id,
@@ -127,12 +127,12 @@ TEB_small_int TEB_RemoteControlInterface_is_there_ack (const TEB_char* access_to
 
 /**
        \brief Retrieves the name of the oldest command addressed to this device.
-      \param [in] access_token An access token.
-        \param [in] device_id The device ID.
+       \param [in] access_token An access token.
+       \param [in] device_id The device ID.
        \param [in] workspace_folder_id The workspace folder ID.
        \param [in] command_name_buffer The buffer in which to save the name.
        \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		\return 0 if there is at least one command, 1 if there are none, otherwise a negative value.
+       \return 0 if there is at least one command, 1 if there are none, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_get_command (const TEB_char* access_token,
                                                      const TEB_char* device_id,
@@ -146,8 +146,8 @@ TEB_small_int TEB_RemoteControlInterface_get_command (const TEB_char* access_tok
        \param [in] device_id The device ID.
        \param [in] command_name The command name.
        \param [in] workspace_folder_id The workspace folder ID.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_CREATE_METADATA_ONLY_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 1 on success, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_CREATE_METADATA_ONLY_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 1 on success, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_send_command_ack (const TEB_char* access_token,
                                                           const TEB_char* device_id,
@@ -161,8 +161,8 @@ TEB_small_int TEB_RemoteControlInterface_send_command_ack (const TEB_char* acces
        \param [in] device_id The device ID.
        \param [in] workspace_folder_id The workspace folder ID.
        \param [in] command_name_buffer The buffer in which to save the name.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 0 if there is at least one command, 1 if there are none, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 0 if there is at least one command, 1 if there are none, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_get_custom_command (const TEB_char* access_token,
                                                             const TEB_char* device_id,
@@ -176,8 +176,8 @@ TEB_small_int TEB_RemoteControlInterface_get_custom_command (const TEB_char* acc
        \param [in] device_id The device ID. Must be URL encoded.
        \param [in] command_name The command name. Must be URL encoded.
        \param [in] workspace_folder_id The workspace folder ID.
-      \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		 \return 1 on success, otherwise a negative value.
+       \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_GDrive_SPLITTABLE_BUFFER_SIZE_FOR_FOR_SEARCH_FILE (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+       \return 1 on success, otherwise a negative value.
     */
 TEB_small_int TEB_RemoteControlInterface_delete_custom_command (const TEB_char* access_token,
                                                                const TEB_char* device_id,
