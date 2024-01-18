@@ -53,8 +53,8 @@ TEB_bool TEB_Number_is_int2 (const TEB_char* from, const TEB_char* to);
 
 /**
          \brief Returns a power of 10.
-        \param [in] exp Exponent of the power with base 10.
-        \return Returns 10 raised to exp.
+         \param [in] exp Exponent of the power with base 10.
+         \return Returns 10 raised to exp.
     */
 TEB_big_u_int TEB_Number_exp10 (TEB_small_u_int exp);
 
