@@ -36,9 +36,9 @@
 
 /**
        \brief Represents a clock with seconds accuracy. Members starting with do_not_edit_manually___ must not be edited manually.	   
-	    initial_year_of_the_epoch: initial year allocated to current_epoch_in_seconds = 0, can be negative;
-	   initial_weekday_of_the_epoch: day of the week related to epoch = 0 (1 = Sunday, 2 = Monday, ..., 7 = Saturday);
-	   current_epoch_in_seconds: the variable used by the clock to measure time in seconds, is considered a utc value without dst that never goes into overflow.
+	initial_year_of_the_epoch: initial year allocated to current_epoch_in_seconds = 0, can be negative;
+	initial_weekday_of_the_epoch: day of the week related to epoch = 0 (1 = Sunday, 2 = Monday, ..., 7 = Saturday);
+	current_epoch_in_seconds: the variable used by the clock to measure time in seconds, is considered a utc value without dst that never goes into overflow.
     */
 struct TEB_Clock_struct {
   TEB_medium_int initial_year_of_the_epoch;
@@ -50,21 +50,21 @@ struct TEB_Clock_struct {
 };
 
 /**
-       \brief Initialize a clock with default values (initial_year_of_the_epoch = 1970, initial_weekday_of_the_epoch = 5, current_epoch_in_seconds = 0, automatic_epoch_update on). 
+           \brief Initialize a clock with default values (initial_year_of_the_epoch = 1970, initial_weekday_of_the_epoch = 5, current_epoch_in_seconds = 0, automatic_epoch_update on). 
 	   \param [in] clock Clock to initialize.
 	   \return 1 if all ok.
     */
 TEB_small_int TEB_Clock_struct_default_init (struct TEB_Clock_struct* clock);
 
 /**
-       \brief Set a clock on the default values initial_year_of_the_epoch = 1970 and initial_weekday_of_the_epoch = 5.
+           \brief Set a clock on the default values initial_year_of_the_epoch = 1970 and initial_weekday_of_the_epoch = 5.
 	   \param [in] clock Clock to set.
 	   \return 1 if all ok.
     */
 TEB_small_int TEB_Clock_set_default_initial_year_epoch (struct TEB_Clock_struct* clock);
 
 /**     
-       \brief Set a clock on the desired values of initial_year_of_the_epoch and initial_weekday_of_the_epoch.
+           \brief Set a clock on the desired values of initial_year_of_the_epoch and initial_weekday_of_the_epoch.
 	   \param [in] clock Clock to set.
 	   \return 1 if all ok.
     */
@@ -73,7 +73,7 @@ TEB_small_int TEB_Clock_set_initial_year_epoch (struct TEB_Clock_struct* clock,
                                                TEB_small_u_int initial_weekday_of_the_epoch);
 											   
 /**     
-       \brief Set a clock on the desired epoch.
+           \brief Set a clock on the desired epoch.
 	   \param [in] clock Clock to set.
 	   \param [in] epoch_to_set_in_seconds Epoch in seconds to set.
 	   \return 1 if all ok.
@@ -81,7 +81,7 @@ TEB_small_int TEB_Clock_set_initial_year_epoch (struct TEB_Clock_struct* clock,
 TEB_small_int TEB_Clock_set_epoch (struct TEB_Clock_struct* clock, TEB_time_t epoch_to_set_in_seconds);
 
 /**     
-       \brief Set a clock on the desired values of epoch provided in the format struct TEB_TimeManagement_struct.
+           \brief Set a clock on the desired values of epoch provided in the format struct TEB_TimeManagement_struct.
 	   \param [in] clock Clock to set.
 	   \param [in] time_to_set Epoch to set provided in the format struct TEB_TimeManagement_struct.
 	   \return 1 if all ok.
@@ -90,7 +90,7 @@ TEB_small_int TEB_Clock_set_time (struct TEB_Clock_struct* clock,
 							      struct TEB_TimeManagement_struct* time_to_set);
 
 /**     
-       \brief Turns automatic clock update on or off. Default is on.
+           \brief Turns automatic clock update on or off. Default is on.
 	   \param [in] clock Clock to set.
 	   \param [in] enable_automatic_update 1 to turn on automatic clock update, 0 to turn it off.
 	   \return 1 if all ok.
@@ -105,7 +105,7 @@ TEB_small_int TEB_Clock_set_automatic_update (struct TEB_Clock_struct* clock,
 TEB_time_t TEB_Clock_get_epoch (const struct TEB_Clock_struct* clock);
 
 /**     
-       \brief Converts a struct TEB_Clock_struct to a struct TEB_TimeManagement_struct.
+           \brief Converts a struct TEB_Clock_struct to a struct TEB_TimeManagement_struct.
 	   \param [in] clock_to_convert The struct TEB_Clock_struct to be converted.
 	   \param [in] time_converted The converted TEB_TimeManagement_struct.
 	   \return 1 if all ok.
