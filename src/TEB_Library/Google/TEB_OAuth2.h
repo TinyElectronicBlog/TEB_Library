@@ -44,10 +44,10 @@ struct TEB_OAuth2_http_response_property {
 /**
         \brief Performs steps 1 - 6 to obtain an access token. See https://developers.google.com/identity/protocols/oauth2/limited-input-device for more information.
         \param [in] access_token_buffer Buffer in which to save the access token.
-		\param [in] refresh_token_buffer Buffer in which to save the refresh token.
-		\param [in] scope Scope for which permission is requested.		
-		\param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_OAuth2_SPLITTABLE_BUFFER_SIZE_FOR_LOGIN (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
-		\param oauth2_step3_display_user_code Function to display the user code of step 3. 
+	\param [in] refresh_token_buffer Buffer in which to save the refresh token.
+	\param [in] scope Scope for which permission is requested.		
+	\param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_OAuth2_SPLITTABLE_BUFFER_SIZE_FOR_LOGIN (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer.  
+	\param oauth2_step3_display_user_code Function to display the user code of step 3. 
         \return 1 on success, 2 if permission is denied by the user, a negative value in case of an error.
     */
 TEB_small_int TEB_OAuth2_login (TEB_char* access_token_buffer,
@@ -59,7 +59,7 @@ TEB_small_int TEB_OAuth2_login (TEB_char* access_token_buffer,
 /**
          \brief Performs "Refreshing an access token" step to obtain an access token. See https://developers.google.com/identity/protocols/oauth2/limited-input-device#offline for more information.
          \param [in] refresh_token The refresh token to be used for step 7. Must end with \0.
-		 \param [in] access_token_buffer Buffer in which to save the access token.
+	 \param [in] access_token_buffer Buffer in which to save the access token.
          \param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_OAuth2_SPLITTABLE_BUFFER_SIZE_FOR_RELOGIN (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer. 
          \return 1 on success, a negative value in case of an error.
     */
@@ -70,7 +70,7 @@ TEB_small_int TEB_OAuth2_relogin (const TEB_char* refresh_token,
 /**
         \brief Performs "Revoking a token" step to revoke an access token. See https://developers.google.com/identity/protocols/oauth2/limited-input-device#tokenrevoke for more information.
         \param [in] token A refresh token or an access token.
-		\param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_OAuth2_SPLITTABLE_BUFFER_SIZE_FOR_LOGOUT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer. 
+	\param [in] function_buffer Buffer needed by the function to execute its instructions. It must be at least TEB_OAuth2_SPLITTABLE_BUFFER_SIZE_FOR_LOGOUT (see TEB_LibrarySettings.h) elements long. If the value NULL is set, the function dynamically allocates a temporary buffer. 
         \return 1 on success, a negative value in case of an error.
     */
 TEB_small_int TEB_OAuth2_logout (const TEB_char* token, TEB_char* function_buffer);
@@ -92,8 +92,8 @@ TEB_small_int TEB_OAuth2_handle_server_response (struct TEB_http_response* http_
                                                 TEB_char* function_buffer);
 
 /**
-       \brief Standard function to display the user code of step 3. 
-	   \param [in] text Text to display.
+        \brief Standard function to display the user code of step 3. 
+	\param [in] text Text to display.
         \return 1 on success, a negative value in case of an error.
     */
 TEB_small_int TEB_OAuth2_standard_oauth2_step3_display_user_code (const TEB_char* text);
