@@ -32,7 +32,7 @@
 */
 
 /**
-         \brief Initialize a splittable array.
+        \brief Initialize a splittable array.
         \param [in] sizeof_one_array_element Size of an array element (e.g. sizeof(int) for an array of int).
         \param [in] array_length Number of array elements.
         \param [in] optional_instantiated_buffer_to_associate A pointer to the array to associate or NULL to associate a new dynamically allocated array.
@@ -51,8 +51,8 @@ TEB_small_int TEB_SplittableArray_delete_last_array ();
 /**   
          \brief Save data or reserve empty space at the beginning of the splittable array.
          \param [in] splittable_array_index ID of the splittable array.
-        \param [in] elements_to_store Elements to store.
-        \param [in] number_of_elements_to_store Number of elements to store.
+         \param [in] elements_to_store Elements to store.
+         \param [in] number_of_elements_to_store Number of elements to store.
          \return 1 if everything is ok.
     */
 TEB_small_int TEB_SplittableArray_add_elements (TEB_size_t splittable_array_index,
@@ -62,8 +62,8 @@ TEB_small_int TEB_SplittableArray_add_elements (TEB_size_t splittable_array_inde
 /**   
          \brief Saves data temporarily at the end of the splittable array. A new execution of this function overwrites the previous data.
          \param [in] splittable_array_index ID of the splittable array.
-        \param [in] elements_to_store_temporarily_to_the_end_of_the_buffer Elements to store.
-        \param [in] number_of_elements_to_store Number of elements to store.
+         \param [in] elements_to_store_temporarily_to_the_end_of_the_buffer Elements to store.
+         \param [in] number_of_elements_to_store Number of elements to store.
          \return A pointer to the data saved in the splittable buffer.
     */
 void* TEB_SplittableArray_add_elements_end (TEB_size_t splittable_array_index,
