@@ -197,30 +197,30 @@ void TEB_debug_undefined_function (const TEB_char* function_name);
 /**
        \brief Prints a message. Beware, when TEB_LibrarySettings_DEBUG_MODE is uncommented, incorrect parameter values result in an error being printed on the debug monitor and the program execution being blocked. 
        \param [in] str The message to print. 
-	   \param [in] mode The execution mode. Default value 1.
-	   \return 1 if all ok.
+       \param [in] mode The execution mode. Default value 1.
+       \return 1 if all ok.
     */
 TEB_small_int TEB_print (const TEB_char* str, TEB_medium_u_int mode);
 
 /**
        \brief Prints a character. Beware, when TEB_LibrarySettings_DEBUG_MODE is uncommented, incorrect parameter values result in an error being printed on the debug monitor and the program execution being blocked. 
        \param [in] c The character to print. 
-	   \param [in] mode The execution mode. Default value 1.
-	   \return 1 if all ok.
+       \param [in] mode The execution mode. Default value 1.
+       \return 1 if all ok.
     */
 TEB_small_int TEB_print_char (const TEB_char c, TEB_medium_u_int mode);
 
 /**
        \brief Prints a number. Beware, when TEB_LibrarySettings_DEBUG_MODE is uncommented, incorrect parameter values result in an error being printed on the debug monitor and the program execution being blocked. 
        \param [in] n The number to print. 
-	   \param [in] mode The execution mode. Default value 1.
-	   \return 1 if all ok.
+       \param [in] mode The execution mode. Default value 1.
+       \return 1 if all ok.
     */
 TEB_small_int TEB_print_int (TEB_big_u_int n, TEB_medium_u_int mode);
 
 /**
-       \brief Reports an error when TEB_LibrarySettings_ENABLE_ERRORS is uncommented. If TEB_LibrarySettings_DEBUG_MODE is 1 or 3 the error is printed on the debug monitor.
-       \param [in] number The error number.
+           \brief Reports an error when TEB_LibrarySettings_ENABLE_ERRORS is uncommented. If TEB_LibrarySettings_DEBUG_MODE is 1 or 3 the error is printed on the debug monitor.
+           \param [in] number The error number.
 	   \param [in] text The error text.
 	   \param [in] duration_in_ms Duration of error reporting in milliseconds.
 	   \param [in] mode The execution mode. Default value 1. If 2 the error is reported only on the debug monitor.
@@ -232,8 +232,8 @@ TEB_small_int TEB_error (TEB_big_u_int number,
 						 TEB_medium_u_int mode);
 
 /**
-       \brief Reports a fatal error when TEB_LibrarySettings_ENABLE_FATAL_ERRORS is uncommented; if TEB_LibrarySettings_DEBUG_MODE is 1 or 3 the error is printed on the debug monitor. Fatal errors with number other than 0 block the execution of the program, requiring a device reboot.
-       \param [in] number The error number.
+           \brief Reports a fatal error when TEB_LibrarySettings_ENABLE_FATAL_ERRORS is uncommented; if TEB_LibrarySettings_DEBUG_MODE is 1 or 3 the error is printed on the debug monitor. Fatal errors with number other than 0 block the execution of the program, requiring a device reboot.
+           \param [in] number The error number.
 	   \param [in] text The error text.
 	   \param [in] mode The execution mode. Default value 1. If 2 the error is reported only on the debug monitor.
 	   \return 1 if all ok.
@@ -249,23 +249,23 @@ void TEB_fatal_error (TEB_big_u_int number,
 //VARIOUS FUNCTIONS
 
 /**
-       \brief All instructions to be executed when starting the device should be placed in the body of this function; TEB_device_init should be executed before any other function.
+           \brief All instructions to be executed when starting the device should be placed in the body of this function; TEB_device_init should be executed before any other function.
 	   \param [in] parameters Additional parameters, if necessary.
 	   \param [in] mode The execution mode. Default value 1.
 	   \return 1 if all ok.
     */
 TEB_small_int TEB_device_init (void* parameters, TEB_medium_u_int mode);
 
-/**
-	   \return The milliseconds elapsed since the device started up. TEB_MILLISECONDS_ELAPSED_SINCE_START_MAX_VALUE is the last value returned before restarting the count from 0.
-    */
+    /**
+       \return The milliseconds elapsed since the device started up. TEB_MILLISECONDS_ELAPSED_SINCE_START_MAX_VALUE is the last value returned before restarting the count from 0.
+     */
 TEB_time_t TEB_ms_elapsed ();
 
 /**
-	 \brief Evaluates if a time interval has elapsed. This function works even if the variable used to measure time goes into overflow.
+	  \brief Evaluates if a time interval has elapsed. This function works even if the variable used to measure time goes into overflow.
 	   \param [in] initial_instant_returned_by_TEB_ms_elapsed The initial time instant to be considered. It must have been returned by TEB_ms_elapsed.
 	   \param [in] interval_duration_in_milliseconds. Interval duration in milliseconds.
-	   	   \param [in] mode The execution mode. Default value 1.
+           \param [in] mode The execution mode. Default value 1.
 	   \return Returns 1 if at least interval_duration_in_milliseconds ms have elapsed since the initial_instant_returned_by_TEB_ms_elapsed, otherwise 0.
     */
 TEB_bool TEB_is_delay_over (TEB_time_t initial_instant_returned_by_TEB_ms_elapsed,
@@ -273,7 +273,7 @@ TEB_bool TEB_is_delay_over (TEB_time_t initial_instant_returned_by_TEB_ms_elapse
 								 TEB_medium_u_int mode);
 
 /**
-       \brief Pauses program execution for the desired time interval.
+           \brief Pauses program execution for the desired time interval.
 	   \param [in] milliseconds_waiting_time The millisecond wait times.
 	   \param [in] mode The execution mode. Default value 1.
 	   \return 1 if all ok.
@@ -281,7 +281,7 @@ TEB_bool TEB_is_delay_over (TEB_time_t initial_instant_returned_by_TEB_ms_elapse
 TEB_small_int TEB_delay (TEB_time_t milliseconds_waiting_time, TEB_medium_u_int mode);
 
 /**
-       \brief Restart the device.
+           \brief Restart the device.
 	   \param [in] mode The execution mode. Default value 1.
     */
 void TEB_reboot_device (TEB_medium_u_int mode);
@@ -303,7 +303,7 @@ TEB_size_t TEB_largest_heap_free_block ();
 //FUNCTIONS TO MANAGE LEDS CONNECTED TO THE DEVICE
 
 /**
-       \brief Turns on a led.
+           \brief Turns on a led.
 	   \param [in] led_id ID of the led to manage. Default value 1.
 	   \param [in] mode The execution mode. Default value 1.
 	   \return 1 if all ok.
@@ -311,7 +311,7 @@ TEB_size_t TEB_largest_heap_free_block ();
 TEB_small_int TEB_led_on (TEB_medium_u_int led_id, TEB_medium_u_int mode);
 
 /**
-       \brief Turns off a led.
+           \brief Turns off a led.
 	   \param [in] led_id ID of the led to manage. Default value 1.
 	   \param [in] mode The execution mode. Default value 1.
 	   \return 1 if all ok.
@@ -319,7 +319,7 @@ TEB_small_int TEB_led_on (TEB_medium_u_int led_id, TEB_medium_u_int mode);
 TEB_small_int TEB_led_off (TEB_medium_u_int led_id, TEB_medium_u_int mode);
 
 /**
-       \brief Turns a led on and off.
+           \brief Turns a led on and off.
 	   \param [in] led_id ID of the led to manage. Default value 1.
 	   \param [in] on_ms Power-on milliseconds.
 	   \param [in] off_ms Power-off milliseconds.
@@ -338,13 +338,13 @@ TEB_small_int TEB_led_blink (TEB_medium_u_int led_id,
 //FUNCTIONS TO MANAGE THE CONNECTION TO WIFI NETWORKS
 
 /**
-          \brief Connects to a WiFi network.
+           \brief Connects to a WiFi network.
 	   \param [in] wifi_interface_id ID of the wifi interface. Default value 1.
-          \param [in] ssid Name of WiFi network.
-          \param [in] password Password of WiFi network.
-          \param [in] timeout_in_ms Maximum time in milliseconds to make the connection.
-		  	   \param [in] mode The execution mode. Default value 1.
-          \return 1 if the Internet connection succeeds within timeout_in_s s.
+           \param [in] ssid Name of WiFi network.
+           \param [in] password Password of WiFi network.
+           \param [in] timeout_in_ms Maximum time in milliseconds to make the connection.
+           \param [in] mode The execution mode. Default value 1.
+           \return 1 if the Internet connection succeeds within timeout_in_s s.
     */
 TEB_small_int TEB_wifi_connect (TEB_small_u_int wifi_interface_id,
 								const TEB_char* ssid,
@@ -353,17 +353,17 @@ TEB_small_int TEB_wifi_connect (TEB_small_u_int wifi_interface_id,
 								TEB_medium_u_int mode);
 
 /**
-          \brief Disconnect from WiFi network.
+           \brief Disconnect from WiFi network.
 	   \param [in] wifi_interface_id ID of the wifi interface. Default value 1.
-		  	   \param [in] mode The execution mode. Default value 1.
-          \return 1 if all ok.
+	   \param [in] mode The execution mode. Default value 1.
+           \return 1 if all ok.
     */
 TEB_small_int TEB_wifi_disconnect (TEB_small_u_int wifi_interface_id, TEB_medium_u_int mode);
 
 /**
 	   \param [in] wifi_interface_id ID of the wifi interface.
-		  	   \param [in] mode The execution mode. Default value 1.
-          \return 1 if the device is connected to a WiFi network, otherwise 0. Return a negative value in case of error.
+           \param [in] mode The execution mode. Default value 1.
+           \return 1 if the device is connected to a WiFi network, otherwise 0. Return a negative value in case of error.
 */
 TEB_small_int TEB_wifi_check (TEB_small_u_int wifi_interface_id, TEB_medium_u_int mode);
 
@@ -374,12 +374,12 @@ TEB_small_int TEB_wifi_check (TEB_small_u_int wifi_interface_id, TEB_medium_u_in
 //FUNCTIONS TO MANAGE DISPLAYS CONNECTED TO THE DEVICE
 
 /**
-          \brief Print a message on a display.
+           \brief Print a message on a display.
 	   \param [in] display_id ID of the display. Default value 1.
-          \param [in] text Text to print.
-          \param [in] text_size Text size. Must be > 0.
-		  	   \param [in] mode The execution mode. Default value 1.
-          \return 1 if all ok.
+           \param [in] text Text to print.
+           \param [in] text_size Text size. Must be > 0.
+	   \param [in] mode The execution mode. Default value 1.
+           \return 1 if all ok.
     */
 TEB_small_int TEB_display_print (TEB_small_u_int display_id, 
 							     const TEB_char* text, 
@@ -394,11 +394,11 @@ TEB_small_int TEB_display_print (TEB_small_u_int display_id,
 
 /**
           \brief Saves data in a memory. 
-	   \param [in] memory_id ID of the memory. Default value 1.
+	  \param [in] memory_id ID of the memory. Default value 1.
           \param [in] elements_to_write Elements to be saved.
           \param [in] number_of_elements_to_write Number of elements to be saved.
           \param [in] sizeof_one_element Size of one element to be saved.
-		  	   \param [in] mode The execution mode. Default value 1.
+	  \param [in] mode The execution mode. Default value 1.
           \return 1 if all ok.
     */
 TEB_small_int TEB_memory_write (TEB_medium_u_int memory_id,
@@ -409,11 +409,11 @@ TEB_small_int TEB_memory_write (TEB_medium_u_int memory_id,
 
 /**
           \brief Read data from a memory. 
-	   \param [in] memory_id ID of the memory. Default value 1.
+	  \param [in] memory_id ID of the memory. Default value 1.
           \param [in] elements_to_read_buffer Buffer in which to save the data.
           \param [in] number_of_elements_to_read Number of elements to read.
           \param [in] sizeof_one_element Size of one element to read.
-		  	   \param [in] mode The execution mode. Default value 1.
+	  \param [in] mode The execution mode. Default value 1.
           \return 1 if all ok.
     */
 TEB_small_int TEB_memory_read (TEB_medium_u_int memory_id,
@@ -432,10 +432,10 @@ TEB_small_int TEB_memory_read (TEB_medium_u_int memory_id,
        \brief Connect to a server.
        \param [in] server_address Server Address.
        \param [in] server_port Server port.
-	     \param [in] use_ssl true to use an encrypted connection.
+       \param [in] use_ssl true to use an encrypted connection.
        \param [in] root_ca SSL root certificate of the server address; if rootCA = "" the certificate is not verified.
        \param [in] connection_timeout_in_ms ms within which the connection must take place. 
-  	   \param [in] mode The execution mode. Default value 1.
+       \param [in] mode The execution mode. Default value 1.
        \return 1 if ok.
        \details TEB_http_connect can only be re-executed after the stop function or after a connect, send or receive failure. 
     */
@@ -449,8 +449,8 @@ TEB_small_int TEB_http_connect (const TEB_char* server_address,
 /**
        \brief Sends an HTTP request.
        \param [in] request_text The request text.
-	     \param [in] request_text_length Length of the request text.
-  	   \param [in] mode The execution mode. Default value 1.
+       \param [in] request_text_length Length of the request text.
+       \param [in] mode The execution mode. Default value 1.
        \return 1 if ok.
        \details If the send fails you must start over with connect. It can be executed after connect or another send.
     */
@@ -473,7 +473,7 @@ TEB_big_int TEB_http_receive (TEB_char* response_buffer,
 /**
        \brief Closes the connection with a server.
        \details It can be executed after connect, send or receive.
-	   \param [in] mode The execution mode. Default value 1.
+       \param [in] mode The execution mode. Default value 1.
        \return The number of characters saved in response_buffer, otherwise a negative value.
     */
 TEB_small_int TEB_http_stop (TEB_medium_u_int mode);
@@ -482,7 +482,7 @@ TEB_small_int TEB_http_stop (TEB_medium_u_int mode);
        \brief HTTP request data type used in TEB_http_send_request.\n
 	   request_text: HTTP request message;\n
 	   server_address: Server Address.\n
-       server_port: Server port.\n
+           server_port: Server port.\n
 	   use_ssl: true to use encrypted connections;\n
 	   root_ca: SSL root certificate of the server address; if root_ca = "" the certificate is not verified.\n
 	   connection_timeout_in_ms: maximum time in milliseconds to connect to the server;\n 
@@ -500,7 +500,7 @@ struct TEB_http_request {
 
 /**
        \brief HTTP response data type used in TEB_http_send_request. The fields do not need to be initialized.
-	    header: http response header, does not end with \0;
+	   header: http response header, does not end with \0;
 	   header_length: header length;
 	   payload: http response payload, does not end with \0;
 	   payload_length: payload length;.  
@@ -519,9 +519,9 @@ struct TEB_http_response {
        \param [in] response_buffer Buffer in which to save the response.
        \param [in] response_buffer_length Response buffer length.
        \param [in] http_response_reception_algorithm Custom algorithm for receiving the HTTP response.
-	   \param [in] additional_parameters_of_http_response_reception_algorithm Any additional parameters to pass to http_response_reception_algorithm.
-        \param [in] mode The execution mode. Default value 1.
-		\return 1 if ok, 2 if "\n\r\n\r" was not found at the end of the HTTP response header.
+       \param [in] additional_parameters_of_http_response_reception_algorithm Any additional parameters to pass to http_response_reception_algorithm.
+       \param [in] mode The execution mode. Default value 1.
+       \return 1 if ok, 2 if "\n\r\n\r" was not found at the end of the HTTP response header.
        \details if return 2 the whole http response is saved in http_response.header. All fields of http_request must be initialized. If the HTTP response is longer than response_buffer_length it is truncated. If http_request.root_ca = "" the rootCA of http_request.server_address is not considered. The TEB_char* fields of http_response do not end with \0 while those of http_request do. http_response contains pointers to response_buffer.
     */
 TEB_small_int TEB_http_send_request (struct TEB_http_request* http_request,
@@ -538,8 +538,8 @@ TEB_small_int TEB_http_send_request (struct TEB_http_request* http_request,
        \param [in] http_response The HTTP response.
        \param [in] response_buffer Buffer in which to save the response.
        \param [in] response_buffer_length Response buffer length.
-        \param [in] mode The execution mode. Default value 1.
-		\return 1 if ok, 2 if "\n\r\n\r" was not found at the end of the HTTP response header.
+       \param [in] mode The execution mode. Default value 1.
+       \return 1 if ok, 2 if "\n\r\n\r" was not found at the end of the HTTP response header.
        \details if return 2 the whole http response is saved in http_response.header. All fields of http_request must be initialized. If the HTTP response is longer than response_buffer_length it is truncated. If http_request.root_ca = "" the rootCA of http_request.server_address is not considered. The TEB_char* fields of http_response do not end with \0 while those of http_request do. http_response contains pointers to response_buffer.
     */
 TEB_small_int TEB_http_standard_send_request (struct TEB_http_request* http_request,
@@ -565,7 +565,7 @@ TEB_char* TEB_http_standard_response_reception_algorithm (TEB_char* response_buf
 
 /**
           \brief Customizable function, if you want to add features not managed by other functions.
-	        \param [in] command_id ID of the command.
+	  \param [in] command_id ID of the command.
           \param [in] optional_parameters Undefined.
           \param [in] optional_buffer Undefined.
           \param [in] optional_buffer_length Undefined.
