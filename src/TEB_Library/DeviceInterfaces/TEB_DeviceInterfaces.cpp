@@ -1269,8 +1269,8 @@ TEB_small_int TEB_DeviceInterfaces_test2 () {
     return TEB_debug_function_end(-20);
   }
 
-  TEB_debug_print("\nIf the device reboots in 15 seconds, it means that all tests will end successfully.\n");
-  TEB_display_print(1, "If the device reboots in 15 seconds, it means that all tests will end successfully.", 1, 1);
+  TEB_debug_print("\nIf the device reboots within 15 seconds, it means that all tests have been successfully completed.\n");
+  TEB_display_print(1, "If the device reboots within 15 seconds, it means that all tests have been successfully completed.", 1, 1);
 
   TEB_delay(15000, 1);
   TEB_reboot_device(1);
